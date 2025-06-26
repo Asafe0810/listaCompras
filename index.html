@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
+            <p class="subtitle">Organize suas compras com facilidade</p>
+        </header>
+
+        <div class="input-container">
+            <input type="text" id="itemInput" placeholder="O que precisa comprar?">
+            <button id="addButton" class="btn-primary">
+                <i class="fas fa-plus"></i> Adicionar
+            </button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <button class="filter-btn" data-filter="completed">Comprados</button>
+        </div>
+
+        <ul id="listaCompras"></ul>
+
+        <div class="stats">
+            <span id="totalItems">0 itens</span>
+            <span id="completedItems">0 comprados</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Desenvolvido por <a href="https://www.instagram.com" target="_blank">Asafe dos Santos</a> © 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
