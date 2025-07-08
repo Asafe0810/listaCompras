@@ -1,47 +1,81 @@
 <!DOCTYPE html>
+<!-- Define o documento como HTML5 -->
 <html lang="pt-br">
+<!-- Define o idioma da página como português do Brasil -->
 
 <head>
+    <!-- Meta tag para definir o charset como UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Meta tag para viewport responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
     <title>Lista de Compras Premium</title>
+    
+    <!-- Link para o arquivo CSS local -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link para o CDN do Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link para a fonte Google Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Container principal da aplicação -->
     <div class="container">
+        <!-- Cabeçalho da aplicação -->
         <header>
-            <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
+            <!-- Container flex para cabeçalho e botão de modo escuro -->
+            <div class="header-container">
+                <!-- Título principal com ícone -->
+                <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
+                <!-- Botão para alternar modo escuro/claro -->
+                <button id="toggleDarkMode" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <!-- Subtítulo descritivo -->
             <p class="subtitle">Organize suas compras com facilidade</p>
         </header>
 
+        <!-- Container para entrada de novos itens -->
         <div class="input-container">
+            <!-- Campo de entrada para novos itens -->
             <input type="text" id="itemInput" placeholder="O que precisa comprar?">
+            <!-- Botão para adicionar itens -->
             <button id="addButton" class="btn-primary">
                 <i class="fas fa-plus"></i> Adicionar
             </button>
         </div>
 
+        <!-- Container para os botões de filtro -->
         <div class="filters">
+            <!-- Botão para mostrar todos os itens -->
             <button class="filter-btn active" data-filter="all">Todos</button>
+            <!-- Botão para mostrar apenas pendentes -->
             <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <!-- Botão para mostrar apenas completados -->
             <button class="filter-btn" data-filter="completed">Comprados</button>
         </div>
 
+        <!-- Lista onde os itens serão renderizados -->
         <ul id="listaCompras"></ul>
 
+        <!-- Área de estatísticas -->
         <div class="stats">
+            <!-- Contador de itens totais -->
             <span id="totalItems">0 itens</span>
+            <!-- Contador de itens completados -->
             <span id="completedItems">0 comprados</span>
         </div>
     </div>
 
+    <!-- Rodapé da aplicação -->
     <footer class="footer">
+        <!-- Créditos com link -->
         Desenvolvido por <a href="https://www.instagram.com" target="_blank">Asafe dos Santos</a> © 2025
     </footer>
 
+    <!-- Inclusão do arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
 
