@@ -299,6 +299,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    let totalCliques = parseInt (localStorage.getItem('totalCliques')) || 0;
+    const contador = document.getElementById('contador');
+    contador.textContent = totalCliques;
+    document.getElementById('btnClique').addEventListener('click') , () =>{
+    totalCliques++;
+    contador.textContent = totalCliques;
+    localStorage.setItem('totalcliques');
+}
+
     // ========== FUNÇÕES AUXILIARES ==========
     // Função auxiliar para obter todos os itens do localStorage
     function obterItensStorage() {

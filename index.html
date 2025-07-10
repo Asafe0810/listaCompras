@@ -60,6 +60,11 @@
         <!-- Lista onde os itens serão renderizados -->
         <ul id="listaCompras"></ul>
 
+        <div class="contador-container"></div>
+            <h1>Contador de cliques</h1>
+        <div class="contador" id="contador">0</div>
+        <button id="btnClique">Clique Aqui</button>
+        <button id="btnMenos">Diminuir</button>
         <!-- Área de estatísticas -->
         <div class="estatisticas">
             <!-- Contador de itens totais -->
@@ -77,6 +82,25 @@
 
     <!-- Inclusão do arquivo JavaScript -->
     <script src="script.js"></script>
+    <script> 
+        let totalCliques = parseInt (localStorage.getItem('totalCliques')) || 0;
+        const contador = document.getElementById('contador');
+        contador.textContent = totalCliques;
+
+        document.getElementById('btnClique').addEventListener('click' ,  () => {
+        totalCliques++;
+        contador.textContent = totalCliques;
+        localStorage.setItem('totalCliques');
+    });
+    </script>
+    <script>
+        document.getElementById('btnMenos').addEventListener('click', funcdimin);
+            function funcdimin () {
+                totalCliques--;
+                contador.textContent = totalCliques;
+                localStorage.setItem('totalCliques', totalCliques);
+            };
+    </script>
 </body>
 
 </html>
