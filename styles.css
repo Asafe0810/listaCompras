@@ -1,18 +1,18 @@
 /* === VARIÁVEIS CSS === */
 :root {
     /* Cores principais */
-    --primary-color: #4361ee;       /* Azul principal */
-    --secondary-color: #3a0ca3;     /* Azul mais escuro */
-    --accent-color: #4cc9f0;        /* Azul claro */
-    --danger-color: #f72585;        /* Rosa para ações perigosas */
-    --success-color: #4ad66d;       /* Verde para sucesso */
-    --light-color: #f8f9fa;         /* Cor clara para fundos */
-    --dark-color: #212529;          /* Cor escura para texto */
-    --gray-color: #6c757d;          /* Cinza para texto secundário */
+    --cor-primaria: #4361ee;       /* Azul principal */
+    --cor-secundaria: #3a0ca3;     /* Azul mais escuro */
+    --cor-destaque: #4cc9f0;        /* Azul claro */
+    --cor-perigo: #f72585;        /* Rosa para ações perigosas */
+    --cor-sucesso: #4ad66d;       /* Verde para sucesso */
+    --cor-clara: #f8f9fa;         /* Cor clara para fundos */
+    --cor-escura: #212529;          /* Cor escura para texto */
+    --cor-cinza: #6c757d;          /* Cinza para texto secundário */
     
     /* Estilos */
-    --border-radius: 12px;          /* Raio das bordas */
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    --borda-arredondada: 12px;          /* Raio das bordas */
+    --sombra-caixa: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra padrão */
 }
 
 /* === RESET BÁSICO === */
@@ -25,7 +25,7 @@
 /* === ESTILOS GERAIS === */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Define fonte padrão */
-    color: var(--dark-color);       /* Cor do texto */
+    color: var(--cor-escura);       /* Cor do texto */
     line-height: 1.6;               /* Espaçamento entre linhas */
     background: linear-gradient(135deg, #e2e9ff 0%, #c6d4ff 100%); /* Gradiente de fundo */
     min-height: 100vh;              /* Altura mínima da viewport */
@@ -40,8 +40,8 @@ body {
     max-width: 600px;               /* Largura máxima */
     margin: 0 auto;                 /* Centraliza horizontalmente */
     background-color: white;        /* Cor de fundo */
-    border-radius: var(--border-radius); /* Bordas arredondadas */
-    box-shadow: var(--box-shadow);  /* Sombra */
+    border-radius: var(--borda-arredondada); /* Bordas arredondadas */
+    box-shadow: var(--sombra-caixa);  /* Sombra */
     padding: 30px;                  /* Espaçamento interno */
     position: relative;             /* Contexto de posicionamento */
     overflow: hidden;               /* Esconde overflow */
@@ -58,7 +58,7 @@ body {
     left: 0;                        /* Alinha à esquerda */
     width: 100%;                    /* Largura total */
     height: 5px;                    /* Altura */
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); /* Gradiente */
+    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-destaque)); /* Gradiente */
 }
 
 /* === CABEÇALHO === */
@@ -68,7 +68,7 @@ header {
 }
 
 /* Container do cabeçalho */
-.header-container {
+.container-cabecalho {
     display: flex;                  /* Layout flex */
     justify-content: space-between; /* Espaço entre itens */
     align-items: center;            /* Alinhamento vertical */
@@ -76,7 +76,7 @@ header {
 
 /* Título principal */
 h1 {
-    color: var(--primary-color);    /* Cor do texto */
+    color: var(--cor-primaria);    /* Cor do texto */
     margin-bottom: 8px;             /* Espaço abaixo */
     display: flex;                  /* Layout flex */
     align-items: center;            /* Alinhamento vertical */
@@ -86,57 +86,57 @@ h1 {
 }
 
 /* Subtítulo */
-.subtitle {
-    color: var(--gray-color);       /* Cor do texto */
+.subtitulo {
+    color: var(--cor-cinza);       /* Cor do texto */
     font-size: 0.9rem;              /* Tamanho da fonte */
 }
 
 /* === BOTÃO DE MODO ESCURO === */
-.dark-mode-btn {
+.botao-modo-escuro {
     background: none;               /* Remove fundo */
     border: none;                   /* Remove borda */
     cursor: pointer;                /* Cursor pointer */
     font-size: 1.2rem;             /* Tamanho do ícone */
-    color: var(--dark-color);       /* Cor do ícone */
+    color: var(--cor-escura);       /* Cor do ícone */
     transition: all 0.3s;           /* Transição suave */
     padding: 8px;                  /* Espaçamento interno */
     border-radius: 50%;            /* Forma circular */
 }
 
-.dark-mode-btn:hover {
+.botao-modo-escuro:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Fundo sutil ao passar mouse */
 }
 
 /* === ENTRADA DE DADOS === */
-.input-container {
+.container-entrada {
     display: flex;                  /* Layout flex */
     gap: 12px;                      /* Espaço entre elementos */
     margin-bottom: 20px;            /* Espaço abaixo */
 }
 
 /* Campo de entrada */
-#itemInput {
+#entradaItem {
     flex: 1;                        /* Ocupa espaço disponível */
     padding: 12px 16px;             /* Espaçamento interno */
     border: 2px solid #e9ecef;      /* Borda */
-    border-radius: var(--border-radius); /* Bordas arredondadas */
+    border-radius: var(--borda-arredondada); /* Bordas arredondadas */
     font-size: 1rem;                /* Tamanho da fonte */
     transition: all 0.3s;           /* Transição suave */
 }
 
 /* Estado de foco */
-#itemInput:focus {
+#entradaItem:focus {
     outline: none;                  /* Remove outline padrão */
-    border-color: var(--primary-color); /* Muda cor da borda */
+    border-color: var(--cor-primaria); /* Muda cor da borda */
     box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2); /* Sombra sutil */
 }
 
 /* Botão primário */
-.btn-primary {
-    background-color: var(--primary-color); /* Cor de fundo */
+.botao-primario {
+    background-color: var(--cor-primaria); /* Cor de fundo */
     color: white;                   /* Cor do texto */
     border: none;                   /* Remove borda */
-    border-radius: var(--border-radius); /* Bordas arredondadas */
+    border-radius: var(--borda-arredondada); /* Bordas arredondadas */
     padding: 12px 20px;             /* Espaçamento interno */
     cursor: pointer;                /* Cursor pointer */
     font-weight: 600;               /* Peso da fonte */
@@ -147,38 +147,38 @@ h1 {
 }
 
 /* Efeito hover */
-.btn-primary:hover {
-    background-color: var(--secondary-color); /* Muda cor de fundo */
+.botao-primario:hover {
+    background-color: var(--cor-secundaria); /* Muda cor de fundo */
     transform: translateY(-1px);    /* Levanta ligeiramente */
 }
 
 /* === FILTROS === */
-.filters {
+.filtros {
     display: flex;                  /* Layout flex */
     gap: 10px;                      /* Espaço entre botões */
     margin-bottom: 20px;            /* Espaço abaixo */
 }
 
 /* Botões de filtro */
-.filter-btn {
+.botao-filtro {
     flex: 1;                        /* Distribui espaço igualmente */
     padding: 10px;                  /* Espaçamento interno */
-    background-color: var(--light-color); /* Cor de fundo */
+    background-color: var(--cor-clara); /* Cor de fundo */
     border: none;                   /* Remove borda */
-    border-radius: var(--border-radius); /* Bordas arredondadas */
+    border-radius: var(--borda-arredondada); /* Bordas arredondadas */
     cursor: pointer;                /* Cursor pointer */
     font-weight: 500;               /* Peso da fonte */
     transition: all 0.3s;           /* Transição suave */
 }
 
 /* Estado ativo */
-.filter-btn.active {
-    background-color: var(--primary-color); /* Cor de fundo */
+.botao-filtro.ativo {
+    background-color: var(--cor-primaria); /* Cor de fundo */
     color: white;                   /* Cor do texto */
 }
 
 /* Efeito hover para não ativos */
-.filter-btn:hover:not(.active) {
+.botao-filtro:hover:not(.ativo) {
     background-color: #e2e6ea;      /* Muda cor de fundo */
 }
 
@@ -195,9 +195,9 @@ h1 {
     padding: 14px 16px;             /* Espaçamento interno */
     margin-bottom: 10px;            /* Espaço entre itens */
     background-color: white;       /* Cor de fundo */
-    border-radius: var(--border-radius); /* Bordas arredondadas */
+    border-radius: var(--borda-arredondada); /* Bordas arredondadas */
     transition: all 0.3s;           /* Transição suave */
-    box-shadow: var(--box-shadow);  /* Sombra */
+    box-shadow: var(--sombra-caixa);  /* Sombra */
     border: 1px solid #e9ecef;      /* Borda sutil */
 }
 
@@ -208,21 +208,21 @@ h1 {
 }
 
 /* Texto do item */
-.item-text {
+.texto-item {
     flex: 1;                        /* Ocupa espaço disponível */
     margin: 0 16px;                 /* Margens horizontais */
     word-break: break-word;         /* Quebra palavras longas */
 }
 
 /* Item completado */
-.completed .item-text {
+.completado .texto-item {
     text-decoration: line-through;  /* Texto riscado */
-    color: var(--gray-color);       /* Cor mais clara */
+    color: var(--cor-cinza);       /* Cor mais clara */
     opacity: 0.8;                   /* Transparência */
 }
 
 /* === BOTÕES DE AÇÃO === */
-.action-btn {
+.botao-acao {
     padding: 8px;                   /* Espaçamento interno */
     border: none;                   /* Remove borda */
     border-radius: 6px;             /* Bordas arredondadas */
@@ -236,77 +236,77 @@ h1 {
 }
 
 /* Botão completar */
-.complete-btn {
-    background-color: var(--success-color); /* Cor de fundo */
+.botao-completar {
+    background-color: var(--cor-sucesso); /* Cor de fundo */
     color: white;                   /* Cor do texto */
 }
 
 /* Efeito hover */
-.complete-btn:hover {
+.botao-completar:hover {
     background-color: #3ac25a;      /* Cor mais escura */
 }
 
 /* Botão deletar */
-.delete-btn {
-    background-color: var(--danger-color); /* Cor de fundo */
+.botao-remover {
+    background-color: var(--cor-perigo); /* Cor de fundo */
     color: white;                   /* Cor do texto */
     margin-left: 8px;               /* Espaço à esquerda */
 }
 
 /* Efeito hover */
-.delete-btn:hover {
+.botao-remover:hover {
     background-color: #e5177b;      /* Cor mais escura */
 }
 
 /* === ESTATÍSTICAS === */
-.stats {
+.estatisticas {
     display: flex;                  /* Layout flex */
     justify-content: space-between; /* Espaço entre elementos */
-    color: var(--gray-color);       /* Cor do texto */
+    color: var(--cor-cinza);       /* Cor do texto */
     font-size: 0.9rem;              /* Tamanho da fonte */
     padding-top: 16px;              /* Espaço acima */
     border-top: 1px solid #e9ecef;  /* Borda no topo */
 }
 
 /* === MENSAGEM DE LISTA VAZIA === */
-.empty-message {
+.mensagem-vazia {
     text-align: center;             /* Alinhamento central */
     padding: 40px 20px;             /* Espaçamento interno */
-    color: var(--gray-color);       /* Cor do texto */
+    color: var(--cor-cinza);       /* Cor do texto */
 }
 
 /* Ícone */
-.empty-message i {
+.mensagem-vazia i {
     font-size: 2.5rem;             /* Tamanho grande */
     margin-bottom: 16px;            /* Espaço abaixo */
-    color: var(--accent-color);     /* Cor do ícone */
+    color: var(--cor-destaque);     /* Cor do ícone */
 }
 
 /* Título */
-.empty-message h3 {
+.mensagem-vazia h3 {
     font-weight: 500;               /* Peso da fonte */
     margin-bottom: 8px;             /* Espaço abaixo */
 }
 
 /* Parágrafo */
-.empty-message p {
+.mensagem-vazia p {
     margin-top: 8px;                /* Espaço acima */
     font-size: 0.9rem;              /* Tamanho da fonte */
 }
 
 /* === RODAPÉ === */
-.footer {
+.rodape {
     text-align: center;             /* Alinhamento central */
     margin-top: 20px;               /* Espaço acima */
     color: white;                   /* Cor do texto */
     font-size: 0.9rem;              /* Tamanho da fonte */
     padding: 20px;                  /* Espaçamento interno */
-    background-color: var(--primary-color); /* Cor de fundo */
-    border-radius: var(--border-radius); /* Bordas arredondadas */
+    background-color: var(--cor-primaria); /* Cor de fundo */
+    border-radius: var(--borda-arredondada); /* Bordas arredondadas */
 }
 
 /* Links */
-.footer a {
+.rodape a {
     color: white;                   /* Cor do texto */
     text-decoration: none;          /* Remove sublinhado */
     font-weight: 600;               /* Peso da fonte */
@@ -324,11 +324,11 @@ h1 {
         padding: 20px;              /* Menor espaçamento interno */
     }
     
-    .input-container {
+    .container-entrada {
         flex-direction: column;     /* Empilha elementos */
     }
     
-    #addButton {
+    #botaoAdicionar {
         justify-content: center;    /* Centraliza conteúdo */
     }
 }
@@ -344,15 +344,15 @@ body.dark-mode .container {
     border-color: #444;             /* Borda mais escura */
 }
 
-body.dark-mode #itemInput,
-body.dark-mode .filter-btn:not(.active) {
+body.dark-mode #entradaItem,
+body.dark-mode .botao-filtro:not(.ativo) {
     background-color: #3a3a3a;      /* Fundo escuro */
     border-color: #444;             /* Borda escura */
     color: #f0f0f0;                /* Texto claro */
 }
 
-body.dark-mode #itemInput:focus {
-    border-color: var(--primary-color); /* Mantém cor da borda */
+body.dark-mode #entradaItem:focus {
+    border-color: var(--cor-primaria); /* Mantém cor da borda */
     box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3); /* Sombra mais visível */
 }
 
@@ -361,29 +361,29 @@ body.dark-mode #listaCompras li {
     border-color: #444;             /* Borda escura */
 }
 
-body.dark-mode .item-text,
-body.dark-mode .subtitle {
+body.dark-mode .texto-item,
+body.dark-mode .subtitulo {
     color: #e0e0e0;                /* Texto mais claro */
 }
 
-body.dark-mode .completed .item-text {
+body.dark-mode .completado .texto-item {
     color: #aaa;                    /* Texto completado mais claro */
 }
 
-body.dark-mode .stats {
+body.dark-mode .estatisticas {
     color: #bbb;                    /* Texto mais claro */
     border-top-color: #444;         /* Borda escura */
 }
 
-body.dark-mode .empty-message {
+body.dark-mode .mensagem-vazia {
     color: #bbb;                    /* Texto mais claro */
 }
 
-body.dark-mode .dark-mode-btn {
+body.dark-mode .botao-modo-escuro {
     color: #f0f0f0;                /* Ícone claro */
 }
 
-body.dark-mode .dark-mode-btn:hover {
+body.dark-mode .botao-modo-escuro:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil hover */
 }
 

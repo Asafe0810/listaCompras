@@ -9,7 +9,7 @@
     <!-- Meta tag para viewport responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título da página exibido na aba do navegador -->
-    <title>Lista de Compras Premium</title>
+    <title>Lista de Compras </title>
     
     <!-- Link para o arquivo CSS local -->
     <link rel="stylesheet" href="styles.css">
@@ -25,52 +25,52 @@
         <!-- Cabeçalho da aplicação -->
         <header>
             <!-- Container flex para cabeçalho e botão de modo escuro -->
-            <div class="header-container">
+            <div class="container-cabecalho">
                 <!-- Título principal com ícone -->
                 <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
                 <!-- Botão para alternar modo escuro/claro -->
-                <button id="toggleDarkMode" class="dark-mode-btn">
+                <button id="alternarModoEscuro" class="botao-modo-escuro">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
             <!-- Subtítulo descritivo -->
-            <p class="subtitle">Organize suas compras com facilidade</p>
+            <p class="subtitulo">Organize suas compras com facilidade</p>
         </header>
 
         <!-- Container para entrada de novos itens -->
-        <div class="input-container">
+        <div class="container-entrada">
             <!-- Campo de entrada para novos itens -->
-            <input type="text" id="itemInput" placeholder="O que precisa comprar?">
+            <input type="text" id="entradaItem" placeholder="O que precisa comprar?">
             <!-- Botão para adicionar itens -->
-            <button id="addButton" class="btn-primary">
+            <button id="botaoAdicionar" class="botao-primario">
                 <i class="fas fa-plus"></i> Adicionar
             </button>
         </div>
 
         <!-- Container para os botões de filtro -->
-        <div class="filters">
+        <div class="filtros">
             <!-- Botão para mostrar todos os itens -->
-            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="botao-filtro ativo" data-filtro="todos">Todos</button>
             <!-- Botão para mostrar apenas pendentes -->
-            <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <button class="botao-filtro" data-filtro="pendentes">Pendentes</button>
             <!-- Botão para mostrar apenas completados -->
-            <button class="filter-btn" data-filter="completed">Comprados</button>
+            <button class="botao-filtro" data-filtro="comprados">Comprados</button>
         </div>
 
         <!-- Lista onde os itens serão renderizados -->
         <ul id="listaCompras"></ul>
 
         <!-- Área de estatísticas -->
-        <div class="stats">
+        <div class="estatisticas">
             <!-- Contador de itens totais -->
-            <span id="totalItems">0 itens</span>
+            <span id="totalItens">0 itens</span>
             <!-- Contador de itens completados -->
-            <span id="completedItems">0 comprados</span>
+            <span id="itensComprados">0 comprados</span>
         </div>
     </div>
 
     <!-- Rodapé da aplicação -->
-    <footer class="footer">
+    <footer class="rodape">
         <!-- Créditos com link -->
         Desenvolvido por <a href="https://www.instagram.com" target="_blank">Asafe dos Santos</a> © 2025
     </footer>
