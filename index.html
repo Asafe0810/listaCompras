@@ -82,25 +82,51 @@
 
     <!-- Inclusão do arquivo JavaScript -->
     <script src="script.js"></script>
-    <script> 
-        let totalCliques = parseInt (localStorage.getItem('totalCliques')) || 0;
-        const contador = document.getElementById('contador');
-        contador.textContent = totalCliques;
 
-        document.getElementById('btnClique').addEventListener('click' ,  () => {
+   <script> 
+    // Obtém o valor armazenado no localStorage com a chave 'totalCliques'
+    // Se não existir, usa 0 como valor padrão
+    // parseInt converte o valor para número inteiro
+    let totalCliques = parseInt(localStorage.getItem('totalCliques')) || 0;
+    
+    // Obtém a referência do elemento HTML com id 'contador'
+    const contador = document.getElementById('contador');
+    
+    // Atualiza o texto do elemento contador com o valor atual de totalCliques
+    contador.textContent = totalCliques;
+
+    // Adiciona um event listener para o evento de clique no botão com id 'btnClique'
+    document.getElementById('btnClique').addEventListener('click', () => {
+        // Incrementa o contador de cliques
         totalCliques++;
+        
+        // Atualiza o texto do contador na página
         contador.textContent = totalCliques;
-        localStorage.setItem('totalCliques');
+        
+        // Armazena o novo valor no localStorage para persistência entre sessões
+        // A chave 'totalCliques' será associada ao valor atual do contador
+        localStorage.setItem('totalCliques', totalCliques);
     });
-    </script>
-    <script>
-        document.getElementById('btnMenos').addEventListener('click', funcdimin);
-            function funcdimin () {
-                totalCliques--;
-                contador.textContent = totalCliques;
-                localStorage.setItem('totalCliques', totalCliques);
-            };
-    </script>
+</script>
+
+<script>
+    // Adiciona um event listener para o evento de clique no botão com id 'btnMenos'
+    // Quando clicado, executa a função funcdimin
+    document.getElementById('btnMenos').addEventListener('click', funcdimin);
+    
+    // Define a função funcdimin que será executada quando o botão for clicado
+    function funcdimin() {
+        // Decrementa o contador de cliques
+        totalCliques--;
+        
+        // Atualiza o texto do contador na página
+        contador.textContent = totalCliques;
+        
+        // Armazena o novo valor no localStorage para persistência entre sessões
+        // A chave 'totalCliques' será associada ao valor atual do contador
+        localStorage.setItem('totalCliques', totalCliques);
+    };
+</script>
 </body>
 
 </html>

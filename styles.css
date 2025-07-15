@@ -293,6 +293,44 @@ h1 {
     margin-top: 8px;                /* Espaço acima */
     font-size: 0.9rem;              /* Tamanho da fonte */
 }
+/* === ESTILOS DO CONTADOR === */
+.contador-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contador {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin: 10px 0;
+}
+
+#btnClique, #btnMenos {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: var(--borda-arredondada);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#btnClique:hover, #btnMenos:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-1px);
+}
+
+/* Estilo específico para o botão de diminuir */
+#btnMenos {
+    background-color: var(--cor-cinza);
+}
+
+#btnMenos:hover {
+    background-color: #5a6268;
+}
 
 /* === RODAPÉ === */
 .rodape {
